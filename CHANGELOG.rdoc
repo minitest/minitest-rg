@@ -1,0 +1,3 @@
+=== 1.0.0 / 2012-07-28
+
+New release! Thanks to previous maintainer Enrico Thierbach for allowing the project to continue without him.

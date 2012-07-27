@@ -1,9 +1,0 @@
-Manifest
-README.md
-Rakefile
-VERSION
-gem.yml
-lib/minitest-rg.rb
-minitest-rg.gemspec
-tasks/echoe.rake
-test/test.rb
