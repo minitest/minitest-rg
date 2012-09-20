@@ -22,6 +22,19 @@ module MiniTest
       io.print(colors[o] || o)
     end
 
+    def puts o=nil
+      return io.puts if o.nil?
+      if o =~ /(\d+) failures, (\d+) errors/
+        if $1 != '0' || $2 != '0'
+          io.puts "\e[31m#{o}\e[0m"
+        else
+          io.puts "\e[32m#{o}\e[0m"
+        end
+      else
+        io.puts o
+      end
+    end
+
     def method_missing msg, *args
       return super unless io.respond_to? msg
       io.send(msg, *args)
