@@ -17,6 +17,8 @@ Hoe.spec 'minitest-rg' do
 
   self.readme_file       = 'README.rdoc'
   self.history_file      = 'CHANGELOG.rdoc'
+
+  dependency 'minitest',  '< 5.0'
 end
 
 # vim: syntax=ruby
