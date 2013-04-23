@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = "minitest-rg"
-  s.version = "1.1.0.20130423074733"
+  s.version = "1.1.1.20130423080845"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Moore"]
@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = "Adds color to your MiniTest output"
   s.email = ["mike@blowmage.com"]
   s.extra_rdoc_files = ["CHANGELOG.rdoc", "Manifest.txt", "README.rdoc"]
-  s.files = [".autotest", "CHANGELOG.rdoc", "LICENSE", "Manifest.txt", "README.rdoc", "Rakefile", "lib/minitest/rg.rb", "minitest-rg.gemspec", "test/test_minitest-rg.rb", ".gemtest"]
+  s.files = [".autotest", ".gemtest", "CHANGELOG.rdoc", "LICENSE", "Manifest.txt", "README.rdoc", "Rakefile", "lib/minitest/rg.rb", "minitest-rg.gemspec", "test/test_minitest-rg.rb"]
   s.homepage = "http://blowmage.com/minitest-rg"
   s.rdoc_options = ["--main", "README.rdoc"]
   s.require_paths = ["lib"]

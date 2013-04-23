@@ -1,7 +1,10 @@
+=== 1.1.1 / 2013-04-23
+
+Set minitest dependency.
+
 === 1.1.0 / 2012-09-20
 
 Color summary output.
-
 
 === 1.0.0 / 2012-07-28
 

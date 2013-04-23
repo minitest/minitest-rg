@@ -1,4 +1,5 @@
 .autotest
+.gemtest
 CHANGELOG.rdoc
 LICENSE
 Manifest.txt

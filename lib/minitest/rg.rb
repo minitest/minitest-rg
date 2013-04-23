@@ -2,7 +2,7 @@ require "minitest/unit"
 
 module MiniTest
   class RG
-    VERSION = "1.1.0"
+    VERSION = "1.1.1"
 
     COLORS = {
       '.' => "\e[32m.\e[0m",
