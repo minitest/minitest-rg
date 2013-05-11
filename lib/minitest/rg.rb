@@ -19,11 +19,12 @@ module MiniTest
     end
 
     def print o
-      io.print(colors[o] || o)
+      io.print(isatty && colors[o] || o)
     end
 
     def puts o=nil
       return io.puts if o.nil?
+      return io.puts o unless isatty
       if o =~ /(\d+) failures, (\d+) errors/
         if $1 != '0' || $2 != '0'
           io.puts "\e[31m#{o}\e[0m"
