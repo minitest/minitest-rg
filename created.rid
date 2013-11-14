@@ -1,5 +1,6 @@
-Sat, 28 Jul 2012 08:27:42 -0600
-lib/minitest/rg.rb	Fri, 27 Jul 2012 13:20:47 -0600
-CHANGELOG.rdoc	Sat, 28 Jul 2012 08:25:45 -0600
-Manifest.txt	Sat, 28 Jul 2012 08:26:29 -0600
-README.rdoc	Fri, 27 Jul 2012 13:20:47 -0600
+Wed, 13 Nov 2013 21:38:33 -0700
+lib/minitest/rg.rb	Wed, 13 Nov 2013 21:31:51 -0700
+lib/minitest/rg_plugin.rb	Wed, 13 Nov 2013 21:33:06 -0700
+CHANGELOG.rdoc	Wed, 13 Nov 2013 21:35:47 -0700
+Manifest.txt	Wed, 13 Nov 2013 21:34:36 -0700
+README.rdoc	Sun, 29 Jul 2012 08:13:09 -0600
