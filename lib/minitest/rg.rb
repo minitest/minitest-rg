@@ -1,4 +1,5 @@
 require "minitest"
+require "minitest/rg_internal"
 
-Minitest.load_plugins
+Minitest.extensions << "rg"
 Minitest::RG.rg!
