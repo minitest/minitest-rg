@@ -1,6 +1,4 @@
-# -*- ruby -*-
-
-require 'rubygems'
+require 'bundler/setup'
 require 'hoe'
 
 Hoe.plugin :gemspec  # `gem install hoe-gemspec`
