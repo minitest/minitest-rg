@@ -1,5 +1,4 @@
 require "minitest/test"
-require "minitest/rg"
 
 module MiniTest
 
@@ -7,10 +6,12 @@ module MiniTest
   end
 
   def self.plugin_rg_init options # :nodoc:
-    io = RG.new options[:io]
+    if RG.rg?
+      io = RG.new options[:io]
 
-    self.reporter.reporters.grep(Minitest::Reporter).each do |rep|
-      rep.io = io
+      self.reporter.reporters.grep(Minitest::Reporter).each do |rep|
+        rep.io = io
+      end
     end
   end
 
