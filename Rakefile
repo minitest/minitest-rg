@@ -11,8 +11,8 @@ Hoe.plugins.delete :rubyforge
 Hoe.spec 'minitest-rg' do
   developer 'Mike Moore', 'mike@blowmage.com'
 
-  self.summary     = 'RedGreen for MiniTest'
-  self.description = 'Adds color to your MiniTest output'
+  self.summary     = 'Red/Green for MiniTest'
+  self.description = 'Colored red/green output for Minitest'
   self.urls        = ['http://blowmage.com/minitest-rg']
   self.license       "MIT"
 
