@@ -1,3 +1,7 @@
+=== 5.1.0 / 2014-04-16
+
+Activate plugin only when required, and fix circular loading issue. (grosser)
+
 === 5.0.0 / 2013-11-13
 
 Updated for Minitest 5.0

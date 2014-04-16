@@ -16,7 +16,7 @@ module MiniTest
   end
 
   class RG
-    VERSION = "5.0.0"
+    VERSION = "5.1.0"
 
     COLORS = {
       '.' => "\e[32m.\e[0m",
