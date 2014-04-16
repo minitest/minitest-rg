@@ -1,5 +1,4 @@
 require "minitest/test"
-require "minitest/rg"
 
 module MiniTest
 
