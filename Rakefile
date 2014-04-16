@@ -6,7 +6,6 @@ require 'hoe'
 Hoe.plugin :gemspec  # `gem install hoe-gemspec`
 Hoe.plugin :git      # `gem install hoe-git`
 Hoe.plugin :minitest # `gem install hoe-minitest`
-Hoe.plugins.delete :rubyforge
 
 Hoe.spec 'minitest-rg' do
   developer 'Mike Moore', 'mike@blowmage.com'
