@@ -10,7 +10,7 @@ module MiniTest
       io = RG.new options[:io]
 
       self.reporter.reporters.grep(Minitest::Reporter).each do |rep|
-        rep.io = io
+        rep.io = io if rep.io.tty?
       end
     end
   end
