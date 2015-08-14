@@ -3,6 +3,9 @@ require "minitest/test"
 module MiniTest
 
   def self.plugin_rg_options opts, options # :nodoc:
+    opts.on "--rg", "Add red/green to test output." do
+      RG.rg!
+    end
   end
 
   def self.plugin_rg_init options # :nodoc:

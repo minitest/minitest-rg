@@ -1,6 +1,6 @@
 = minitest-rg
 
-Adds color to your MiniTest output.
+Adds red/green color to your Minitest output.
 
 == Install
 
@@ -10,7 +10,15 @@ Adds color to your MiniTest output.
 
 Add the following to your test helper:
 
-    require 'minitest/rg'
+    require "minitest/rg"
+
+Or you can run your tests with the `--rg` flag:
+
+    $ ruby test/test_the_thing.rb --rg
+
+Or if you are using a rake task to run your tests you can set the `--rg` flag in the `TESTOPTS` environment variable.
+
+    $ rake test TESTOPTS="--rg"
 
 == Contribute
 
