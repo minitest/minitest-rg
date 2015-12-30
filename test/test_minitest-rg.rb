@@ -1,5 +1,7 @@
-gem "minitest"
+require 'bundler/setup'
 require 'minitest/autorun'
+
+$LOAD_PATH << 'lib'
 require 'minitest/rg'
 
 describe 'minitest-rg' do
