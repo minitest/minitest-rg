@@ -1,5 +1,8 @@
-gem "minitest"
+#!/usr/bin/env ruby
+require 'bundler/setup'
 require 'minitest/autorun'
+
+$LOAD_PATH << 'lib'
 require 'minitest/rg'
 
 describe 'minitest-rg' do
