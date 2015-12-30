@@ -21,4 +21,15 @@ Hoe.spec 'minitest-rg' do
   dependency 'minitest',  '~> 5.0'
 end
 
+Rake::Task[:default].clear
+task :default do
+  expected = "\e[36mS\e[0m\e[33mE\e[0m\e[31mF\e[0m\e[32m.\e[0m"
+  result = `script -q /dev/null test/test_minitest-rg.rb`
+  if result.include?(expected)
+    raise "Result did not include #{expected}: #{result}"
+  else
+    puts "Looks good: #{expected}"
+  end
+end
+
 # vim: syntax=ruby
