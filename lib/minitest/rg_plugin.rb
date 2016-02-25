@@ -1,8 +1,7 @@
 require "minitest/test"
 
 module MiniTest
-
-  def self.plugin_rg_options opts, options # :nodoc:
+  def self.plugin_rg_options opts, _options # :nodoc:
     opts.on "--rg", "Add red/green to test output." do
       RG.rg!
     end
@@ -12,21 +11,21 @@ module MiniTest
     if RG.rg?
       io = RG.new options[:io]
 
-      self.reporter.reporters.grep(Minitest::Reporter).each do |rep|
+      reporter.reporters.grep(Minitest::Reporter).each do |rep|
         rep.io = io if rep.io.tty?
       end
     end
   end
 
   class RG
-    VERSION = "5.2.0"
+    VERSION = "5.2.0".freeze
 
     COLORS = {
       "." => "\e[32m.\e[0m",
       "E" => "\e[33mE\e[0m",
       "F" => "\e[31mF\e[0m",
-      "S" => "\e[36mS\e[0m",
-    }
+      "S" => "\e[36mS\e[0m"
+    }.freeze
 
     attr_reader :io, :colors
 
@@ -47,10 +46,10 @@ module MiniTest
       io.print(colors[o] || o)
     end
 
-    def puts o=nil
+    def puts o = nil
       return io.puts if o.nil?
       if o =~ /(\d+) failures, (\d+) errors/
-        if $1 != "0" || $2 != "0"
+        if Regexp.last_match[1] != "0" || Regexp.last_match[2] != "0"
           io.puts "\e[31m#{o}\e[0m"
         else
           io.puts "\e[32m#{o}\e[0m"

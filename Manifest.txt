@@ -1,5 +1,6 @@
 .autotest
 .gemtest
+.rubocop.yml
 CHANGELOG.rdoc
 Gemfile
 LICENSE
@@ -9,4 +10,4 @@ Rakefile
 lib/minitest/rg.rb
 lib/minitest/rg_plugin.rb
 minitest-rg.gemspec
-test/test_minitest-rg.rb
+test/test_rg.rb

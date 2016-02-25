@@ -19,6 +19,11 @@ Hoe.spec "minitest-rg" do
   self.history_file      = "CHANGELOG.rdoc"
 
   dependency "minitest",  "~> 5.0"
+  dependency "rubocop",   "~> 0.37", :dev
 end
 
 # vim: syntax=ruby
+
+require "rubocop/rake_task"
+
+RuboCop::RakeTask.new
