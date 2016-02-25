@@ -10,4 +10,8 @@ Rakefile
 lib/minitest/rg.rb
 lib/minitest/rg_plugin.rb
 minitest-rg.gemspec
+scripts/run_error
+scripts/run_fail
+scripts/run_pass
+scripts/run_skip
 test/test_rg.rb

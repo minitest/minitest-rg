@@ -24,6 +24,36 @@ end
 
 # vim: syntax=ruby
 
+task :sanity do
+  puts "="*72
+  puts "Running a \e[32mpassing\e[0m test:"
+  puts "="*72
+  puts
+  puts `script -q /dev/null ./scripts/run_pass`
+  puts
+
+  puts "="*72
+  puts "Running a \e[31mfailing\e[0m test:"
+  puts "="*72
+  puts
+  puts `script -q /dev/null ./scripts/run_fail`
+  puts
+
+  puts "="*72
+  puts "Running a \e[33merroring\e[0m test:"
+  puts "="*72
+  puts
+  puts `script -q /dev/null ./scripts/run_error`
+  puts
+
+  puts "="*72
+  puts "Running a \e[36mskipped\e[0m test:"
+  puts "="*72
+  puts
+  puts `script -q /dev/null ./scripts/run_skip`
+  puts
+end
+
 require "rubocop/rake_task"
 
 RuboCop::RakeTask.new
