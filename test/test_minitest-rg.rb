@@ -1,8 +1,8 @@
 gem "minitest"
-require 'minitest/autorun'
-require 'minitest/rg'
+require "minitest/autorun"
+require "minitest/rg"
 
-describe 'minitest-rg' do
+describe "minitest-rg" do
   # generate passing
   it "passes" do
     assert_equal 1, 1, "Pass should be GREEN"

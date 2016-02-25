@@ -22,10 +22,10 @@ module MiniTest
     VERSION = "5.2.0"
 
     COLORS = {
-      '.' => "\e[32m.\e[0m",
-      'E' => "\e[33mE\e[0m",
-      'F' => "\e[31mF\e[0m",
-      'S' => "\e[36mS\e[0m",
+      "." => "\e[32m.\e[0m",
+      "E" => "\e[33mE\e[0m",
+      "F" => "\e[31mF\e[0m",
+      "S" => "\e[36mS\e[0m",
     }
 
     attr_reader :io, :colors
@@ -50,7 +50,7 @@ module MiniTest
     def puts o=nil
       return io.puts if o.nil?
       if o =~ /(\d+) failures, (\d+) errors/
-        if $1 != '0' || $2 != '0'
+        if $1 != "0" || $2 != "0"
           io.puts "\e[31m#{o}\e[0m"
         else
           io.puts "\e[32m#{o}\e[0m"
