@@ -1,4 +1,7 @@
-gem "minitest"
+require "bundler/setup"
+
+$LOAD_PATH.unshift File.dirname(__FILE__) + "/../lib"
+
 require "minitest/autorun"
 require "minitest/rg"
 
@@ -44,12 +47,31 @@ class TestRG < Minitest::Test
     assert_match exp_sum, output, "Skipped summary is CYAN"
   end
 
-  def capture_output command
-    os = `uname -s`.chomp
-    if os.include?("BSD") || os.include?("Darwin")
-      `script -q /dev/null ./scripts/run_#{command}`
+  def test_no_colors_via_option
+    output = capture_output "no_color"
+    assert_includes output, "\n1 runs"
+  end
+
+  def test_force_colors_via_option
+    output = capture_output "color", tty: false
+    assert_includes output, "\n\e[32m1 runs"
+  end
+
+  def test_no_color_without_tty
+    output = capture_output "pass", tty: false
+    assert_includes output, "\n1 runs"
+  end
+
+  def capture_output command, tty: true
+    if tty
+      os = `uname -s`.chomp
+      if os.include?("BSD") || os.include?("Darwin")
+        `script -q /dev/null ./scripts/run_#{command}`
+      else
+        `script -q -c ./scripts/run_#{command} /dev/null`
+      end
     else
-      `script -q -c ./scripts/run_#{command} /dev/null`
+      `scripts/run_#{command} </dev/null`
     end
   end
 end
