@@ -1,4 +1,4 @@
-require "minitest/test"
+require "minitest"
 
 module Minitest
   def self.plugin_rg_options opts, _options # :nodoc:
