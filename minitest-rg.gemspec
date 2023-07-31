@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.rdoc_options = ["--main", "README.rdoc"]
   s.rubygems_version = "2.5.1"
-  s.summary = "Red/Green for MiniTest"
+  s.summary = "Red/Green for Minitest"
 
   if s.respond_to? :specification_version then
     s.specification_version = 4

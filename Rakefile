@@ -10,7 +10,7 @@ Hoe.plugin :minitest # `gem install hoe-minitest`
 Hoe.spec "minitest-rg" do
   developer "Mike Moore", "mike@blowmage.com"
 
-  self.summary     = "Red/Green for MiniTest"
+  self.summary     = "Red/Green for Minitest"
   self.description = "Colored red/green output for Minitest"
   self.urls        = ["http://blowmage.com/minitest-rg"]
   self.license       "MIT"
