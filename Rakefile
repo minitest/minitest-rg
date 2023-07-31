@@ -12,7 +12,6 @@ Hoe.spec "minitest-rg" do
 
   self.summary     = "Red/Green for Minitest"
   self.description = "Colored red/green output for Minitest"
-  self.urls        = ["http://blowmage.com/minitest-rg"]
   self.license       "MIT"
 
   self.readme_file       = "README.rdoc"
