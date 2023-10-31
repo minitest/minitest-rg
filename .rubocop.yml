@@ -1,9 +1,11 @@
 AllCops:
   NewCops: enable
   SuggestExtensions: false
+  TargetRubyVersion: 2.7
   Exclude:
     - "doc/**/*"
     - "pkg/**/*"
+    - "vendor/**/*"
     - "minitest-rg.gemspec"
     - "Rakefile"
     - "Gemfile"
