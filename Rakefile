@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # -*- ruby -*-
 
 require "rubygems"
@@ -12,13 +14,13 @@ Hoe.spec "minitest-rg" do
 
   self.summary     = "Red/Green for Minitest"
   self.description = "Colored red/green output for Minitest"
-  self.license       "MIT"
+  license "MIT"
 
   self.readme_file       = "README.rdoc"
   self.history_file      = "CHANGELOG.rdoc"
 
   dependency "minitest",  "~> 5.0"
-  dependency "rubocop",   "~> 0.37", :dev
+  dependency "rubocop",   "~> 1.57.0", :dev
 end
 
 # vim: syntax=ruby

@@ -7,7 +7,7 @@ ARGV << "--rg"
 
 require "minitest/autorun"
 
-$LOAD_PATH.unshift File.dirname(__FILE__) + "/../lib"
+$LOAD_PATH.unshift "#{File.dirname(__FILE__)}/../lib"
 require "minitest/rg"
 
 class TestPass < Minitest::Test
