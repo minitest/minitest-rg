@@ -2,8 +2,8 @@ require "minitest"
 
 module Minitest
   def self.plugin_rg_options opts, _options # :nodoc:
-    opts.on "--rg", "Add red/green to test output." do
-      RG.rg!
+    opts.on "--[no-]rg", "Add red/green to test output." do |bool|
+      RG.rg! bool
     end
   end
 
@@ -11,9 +11,7 @@ module Minitest
     if RG.rg?
       io = RG.new options[:io]
 
-      reporter.reporters.grep(Minitest::Reporter).each do |rep|
-        rep.io = io if rep.io.tty?
-      end
+      reporter.reporters.grep(Minitest::Reporter).each { |rep| rep.io = io }
     end
   end
 
@@ -29,8 +27,8 @@ module Minitest
 
     attr_reader :io, :colors
 
-    def self.rg!
-      @rg = true
+    def self.rg!(bool = true)
+      @rg = bool
     end
 
     def self.rg?

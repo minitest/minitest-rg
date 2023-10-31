@@ -1,4 +1,4 @@
 require "minitest"
 
 Minitest.load_plugins
-Minitest::RG.rg!
+Minitest::RG.rg! if $stdout.tty?
