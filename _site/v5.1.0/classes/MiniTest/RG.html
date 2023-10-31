@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MiniTest::RG</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/panel.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../css/github.css" type="text/css" media="screen" />
+<script src="../../js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/highlight.pack.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/search_index.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searcher.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../panel/tree.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/searchdoc.js" type="text/javascript" charset="utf-8"></script>
+<meta name="data-rel-prefix" content="../../">
+<meta name="data-tree-keys" content='["MiniTest", "RG"]'>
+
+
+    <meta property="og:title" value="MiniTest::RG">
+
+  
+
+    <meta name="keywords" content="MiniTest::RG class, rg!, rg?, new, print, puts, method_missing">
+</head>
+
+<body>
+    <a class="sr-only sr-only-focusable" href="#content" data-turbolinks="false">Skip to Content</a>
+    <a class="sr-only sr-only-focusable" href="#search" data-turbolinks="false">Skip to Search</a>
+
+    <input type="checkbox" id="hamburger" class="panel_checkbox">
+<label class="panel_mobile_button" for="hamburger"><span></span> Menu</label>
+<nav class="panel panel_tree" id="panel" data-turbolinks-permanent>
+  <div class="header">
+    <input type="text" placeholder="Search (/) for a class, method, ..." autosave="searchdoc" results="10" id="search" autocomplete="off" tabindex="-1" />
+    <label class="panel_mobile_button_close" for="hamburger"><span></span> Close</label>
+  </div>
+  <div class="tree">
+    <ul>
+    </ul>
+  </div>
+  <div class="result">
+    <ul>
+    </ul>
+  </div>
+  <a href="links.html" id="links">index</a>
+</nav>
+
+
+    <div class="banner">
+        
+        <h2>
+            <span class="type">Class</span>
+            MiniTest::RG
+            
+                <span class="parent">&lt;
+                    
+                    Object
+                    
+                </span>
+            
+        </h2>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/minitest/rg_plugin_rb.html">lib/minitest/rg_plugin.rb</a></li>
+            
+        </ul>
+        
+    </div>
+
+    <main id="bodyContent">
+        <div id="content">
+  
+
+
+  
+
+
+  
+  
+
+
+  
+
+
+  
+    <!-- Method ref -->
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+      
+        <dt>M</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-method_missing">method_missing</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>N</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-new">new</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>P</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-i-print">print</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-i-puts">puts</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+        <dt>R</dt>
+        <dd>
+          <ul>
+            
+              
+              <li>
+                <a href="#method-c-rg-21">rg!</a>,
+              </li>
+            
+              
+              <li>
+                <a href="#method-c-rg-3F">rg?</a>
+              </li>
+            
+          </ul>
+        </dd>
+      
+    </dl>
+  
+
+  
+
+
+
+  
+
+    
+
+    
+
+    
+      <!-- Section constants -->
+      <h2 class="sectiontitle">Constants</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class="attr-name">COLORS</td>
+            <td>=</td>
+            <td class="attr-value">{
+&#39;.&#39; =&gt; &quot;\e[32m.\e[0m&quot;,
+&#39;E&#39; =&gt; &quot;\e[33mE\e[0m&quot;,
+&#39;F&#39; =&gt; &quot;\e[31mF\e[0m&quot;,
+&#39;S&#39; =&gt; &quot;\e[36mS\e[0m&quot;,
+}</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+          <tr valign='top'>
+            <td class="attr-name">VERSION</td>
+            <td>=</td>
+            <td class="attr-value">&quot;5.1.0&quot;</td>
+          </tr>
+          
+            <tr valign='top'>
+              <td>&nbsp;</td>
+              <td colspan="2" class="attr-desc"></td>
+            </tr>
+          
+        
+      </table>
+    
+
+
+    
+      <!-- Section attributes -->
+      <h2 class="sectiontitle">Attributes</h2>
+      <table border='0' cellpadding='5'>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>colors</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+          <tr valign='top'>
+            <td class='attr-rw'>
+              [R]
+            </td>
+            <td class='attr-name'>io</td>
+            <td class='attr-desc'></td>
+          </tr>
+        
+      </table>
+    
+
+
+    <!-- Methods -->
+    
+      <h2 class="sectiontitle">Class Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-c-new">
+            
+              <b>new</b>(io, colors = COLORS)
+            
+            <a href="../../classes/MiniTest/RG.html#method-c-new" name="method-c-new" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-new_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/minitest/rg_plugin.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span> <span class="ruby-identifier">io</span>, <span class="ruby-identifier">colors</span> = <span class="ruby-constant">COLORS</span>
+  <span class="ruby-ivar">@io</span>     = <span class="ruby-identifier">io</span>
+  <span class="ruby-ivar">@colors</span> = <span class="ruby-identifier">colors</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-rg-21">
+            
+              <b>rg!</b>()
+            
+            <a href="../../classes/MiniTest/RG.html#method-c-rg-21" name="method-c-rg-21" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-rg-21_source')" id="l_method-c-rg-21_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-rg-21_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/minitest/rg_plugin.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">rg!</span>
+  <span class="ruby-ivar">@rg</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-c-rg-3F">
+            
+              <b>rg?</b>()
+            
+            <a href="../../classes/MiniTest/RG.html#method-c-rg-3F" name="method-c-rg-3F" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-c-rg-3F_source')" id="l_method-c-rg-3F_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-c-rg-3F_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/minitest/rg_plugin.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">rg?</span>
+  <span class="ruby-ivar">@rg</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+      <h2 class="sectiontitle">Instance Public methods</h2>
+      
+        <div class="method">
+          <h3 class="title method-title" id="method-i-method_missing">
+            
+              <b>method_missing</b>(msg, *args)
+            
+            <a href="../../classes/MiniTest/RG.html#method-i-method_missing" name="method-i-method_missing" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-method_missing_source')" id="l_method-i-method_missing_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-method_missing_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/minitest/rg_plugin.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">method_missing</span> <span class="ruby-identifier">msg</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">super</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-identifier">msg</span>
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">msg</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-print">
+            
+              <b>print</b>(o)
+            
+            <a href="../../classes/MiniTest/RG.html#method-i-print" name="method-i-print" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-print_source')" id="l_method-i-print_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-print_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/minitest/rg_plugin.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">print</span> <span class="ruby-identifier">o</span>
+  <span class="ruby-identifier">io</span>.<span class="ruby-identifier">print</span>(<span class="ruby-identifier">colors</span>[<span class="ruby-identifier">o</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">o</span>)
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+        <div class="method">
+          <h3 class="title method-title" id="method-i-puts">
+            
+              <b>puts</b>(o=nil)
+            
+            <a href="../../classes/MiniTest/RG.html#method-i-puts" name="method-i-puts" class="permalink">Link</a>
+          </h3>
+
+          
+            <div class="description">
+              
+            </div>
+          
+
+          
+
+          
+
+          
+            
+            <div class="sourcecode">
+              
+              <p class="source-link">
+                 Source: 
+
+                
+                  <a href="javascript:toggleSource('method-i-puts_source')" id="l_method-i-puts_source">show</a>
+                
+
+                
+
+                
+              </p>
+              <div id="method-i-puts_source" class="dyn-source">
+                <pre><span class="ruby-comment"># File lib/minitest/rg_plugin.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">puts</span> <span class="ruby-identifier">o</span>=<span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">o</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">o</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/(\d+) failures, (\d+) errors/</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-node">$1</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;0&#39;</span> <span class="ruby-operator">||</span> <span class="ruby-node">$2</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;0&#39;</span>
+      <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\e[31m#{o}\e[0m&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;\e[32m#{o}\e[0m&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">o</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+              </div>
+            </div>
+            
+          </div>
+        
+      
+    
+  
+</div>
+
+    </main>
+  </body>
+</html>
