@@ -1,5 +1,8 @@
 = minitest-rg
 
+home :: https://github.com/minitest/minitest-rg
+bugs :: https://github.com/minitest/minitest-rg/issues
+
 Adds red/green color to your Minitest output.
 
 == Install
