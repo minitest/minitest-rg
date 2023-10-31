@@ -5,16 +5,16 @@ require "minitest"
 module Minitest
   def self.plugin_rg_options opts, _options # :nodoc:
     opts.on "--[no-]rg", "Add red/green to test output." do |bool|
-      RG.rg! bool
+      RG.rg! color: bool
     end
   end
 
   def self.plugin_rg_init options # :nodoc:
-    if RG.rg?
-      io = RG.new options[:io]
+    return unless RG.rg?
 
-      reporter.reporters.grep(Minitest::Reporter).each { |rep| rep.io = io }
-    end
+    io = RG.new options[:io]
+
+    reporter.reporters.grep(Minitest::Reporter).each { |rep| rep.io = io }
   end
 
   class RG
@@ -29,8 +29,8 @@ module Minitest
 
     attr_reader :io, :colors
 
-    def self.rg! bool = true
-      @rg = bool
+    def self.rg! color: true
+      @rg = color
     end
 
     def self.rg?
@@ -42,28 +42,34 @@ module Minitest
       @colors = colors
     end
 
-    def print o
-      io.print(colors[o] || o)
+    def print output
+      io.print(colors[output] || output)
     end
 
-    def puts o = nil
-      return io.puts if o.nil?
+    def puts output = nil
+      return io.puts if output.nil?
 
-      if o =~ /(\d+) failures, (\d+) errors/
+      if output =~ /(\d+) failures, (\d+) errors/
         if Regexp.last_match[1] != "0" || Regexp.last_match[2] != "0"
-          io.puts "\e[31m#{o}\e[0m"
+          io.puts "\e[31m#{output}\e[0m"
         else
-          io.puts "\e[32m#{o}\e[0m"
+          io.puts "\e[32m#{output}\e[0m"
         end
       else
-        io.puts o
+        io.puts output
       end
     end
 
     def method_missing msg, *args
-      return super unless io.respond_to? msg
+      return io.send(msg, *args) if io.respond_to? msg
 
-      io.send(msg, *args)
+      super
+    end
+
+    def respond_to_missing? method_name, include_all = false
+      return true if io.respond_to? method_name, include_all
+
+      super
     end
   end
 end

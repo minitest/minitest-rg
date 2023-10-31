@@ -1,23 +1,27 @@
 AllCops:
+  NewCops: enable
+  SuggestExtensions: false
   Exclude:
+    - "doc/**/*"
+    - "pkg/**/*"
     - "minitest-rg.gemspec"
     - "Rakefile"
     - "Gemfile"
 
-Documentation:
-  Enabled: false
 
-Style/StringLiterals:
-  EnforcedStyle: double_quotes
-Style/MethodDefParentheses:
-  EnforcedStyle: require_no_parentheses
-Style/SpaceAroundOperators:
+Layout/SpaceAroundOperators:
   Enabled: false
-Metrics/CyclomaticComplexity:
-  Max: 10
-Metrics/PerceivedComplexity:
-  Max: 10
 Metrics/AbcSize:
   Max: 25
+Metrics/CyclomaticComplexity:
+  Max: 10
 Metrics/MethodLength:
   Max: 15
+Style/Documentation:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Max: 10
+Style/MethodDefParentheses:
+  EnforcedStyle: require_no_parentheses
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
