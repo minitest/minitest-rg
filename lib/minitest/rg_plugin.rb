@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "minitest"
 
 module Minitest
@@ -16,7 +18,7 @@ module Minitest
   end
 
   class RG
-    VERSION = "5.2.0".freeze
+    VERSION = "5.2.0"
 
     COLORS = {
       "." => "\e[32m.\e[0m",
@@ -27,7 +29,7 @@ module Minitest
 
     attr_reader :io, :colors
 
-    def self.rg!(bool = true)
+    def self.rg! bool = true
       @rg = bool
     end
 
@@ -46,6 +48,7 @@ module Minitest
 
     def puts o = nil
       return io.puts if o.nil?
+
       if o =~ /(\d+) failures, (\d+) errors/
         if Regexp.last_match[1] != "0" || Regexp.last_match[2] != "0"
           io.puts "\e[31m#{o}\e[0m"
@@ -59,6 +62,7 @@ module Minitest
 
     def method_missing msg, *args
       return super unless io.respond_to? msg
+
       io.send(msg, *args)
     end
   end
