@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
-# stub: minitest-rg 5.2.0.20231030224949 ruby lib
+# stub: minitest-rg 5.3.0.20231031004948 ruby lib
 
 Gem::Specification.new do |s|
   s.name = "minitest-rg".freeze
-  s.version = "5.2.0.20231030224949"
+  s.version = "5.3.0.20231031004948"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.metadata = { "bug_tracker_uri" => "https://github.com/minitest/minitest-rg/issues", "homepage_uri" => "https://github.com/minitest/minitest-rg" } if s.respond_to? :metadata=
