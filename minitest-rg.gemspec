@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.email = ["mike@blowmage.com"]
   s.extra_rdoc_files = ["CHANGELOG.rdoc", "Manifest.txt", "README.rdoc"]
   s.files = [".autotest", ".gemtest", ".rubocop.yml", "CHANGELOG.rdoc", "Gemfile", "LICENSE", "Manifest.txt", "README.rdoc", "Rakefile", "lib/minitest/rg.rb", "lib/minitest/rg_plugin.rb", "minitest-rg.gemspec", "scripts/run_error", "scripts/run_fail", "scripts/run_pass", "scripts/run_skip", "test/test_rg.rb"]
-  s.homepage = "http://blowmage.com/minitest-rg"
+  s.homepage = "https://github.com/minitest/minitest-rg"
   s.licenses = ["MIT"]
   s.rdoc_options = ["--main", "README.rdoc"]
   s.rubygems_version = "2.5.1"
