@@ -3,6 +3,9 @@
 home :: https://github.com/minitest/minitest-rg
 bugs :: https://github.com/minitest/minitest-rg/issues
 
+{rdoc-image:https://github.com/minitest/minitest-rg/actions/workflows/ci.yml/badge.svg}[https://github.com/minitest/minitest-rg/actions/workflows/ci.yml]
+{rdoc-image:https://github.com/minitest/minitest-rg/actions/workflows/github-code-scanning/codeql/badge.svg}[https://github.com/minitest/minitest-rg/actions/workflows/github-code-scanning/codeql]
+
 Adds red/green color to your Minitest output.
 
 == Install
@@ -23,13 +26,23 @@ Or if you are using a rake task to run your tests you can set the `--rg` flag in
 
     $ rake test TESTOPTS="--rg"
 
-== Contribute
+== Get Involved
 
-http://github.com/blowmage/minitest-rg
+Join the Github discussions to get help or offer suggestions:
+
+https://github.com/minitest/minitest-rg/discussions
+
+Report bugs by opening an issue:
+
+https://github.com/minitest/minitest-rg/issues
+
+Contribute changes by creating a pull request:
+
+https://github.com/minitest/minitest-rg/pulls
 
 == License
 
-Copyright (c) 2012 Mike Moore
+Copyright (c) 2023 Mike Moore
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
