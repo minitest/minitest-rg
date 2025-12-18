@@ -1,56 +1,56 @@
 # frozen_string_literal: true
 
-# -*- ruby -*-
+require "bundler"
+require "bundler/setup"
+require "bundler/gem_tasks"
 
-require "rubygems"
-require "hoe"
-
-Hoe.plugin :gemspec  # `gem install hoe-gemspec`
-Hoe.plugin :git      # `gem install hoe-git`
-Hoe.plugin :minitest # `gem install hoe-minitest`
-
-Hoe.spec "minitest-rg" do
-  developer "Mike Moore", "mike@blowmage.com"
-
-  self.summary     = "Red/Green for Minitest"
-  self.description = "Colored red/green output for Minitest"
-  license "MIT"
-
-  self.readme_file       = "README.rdoc"
-  self.history_file      = "CHANGELOG.rdoc"
-
-  dependency "minitest",  "~> 5.0"
-  dependency "rubocop",   "~> 1.57.0", :dev
+require "rdoc/task"
+RDoc::Task.new do |rdoc|
+  rdoc.main = "README.md"
+  rdoc.title = "minitest-rg"
+  rdoc.markup = "tomdoc"
+  rdoc.rdoc_files.include "README.md", "lib/**/*.rb"
+  rdoc.rdoc_dir = "doc"
 end
 
-# vim: syntax=ruby
+require "rubocop/rake_task"
+RuboCop::RakeTask.new
+
+require "rake/testtask"
+desc "Run tests."
+Rake::TestTask.new do |t|
+  t.libs << "test"
+  t.test_files = FileList["test/**/test_*.rb"]
+  t.warning = false
+  t.verbose = false
+end
 
 desc "Run all test type scripts"
 task :sanity do
-  puts "="*72
+  puts "=" * 72
   puts "Running a \e[32mpassing\e[0m test:"
-  puts "="*72
+  puts "=" * 72
   puts
   puts capture_output("pass")
   puts
 
-  puts "="*72
+  puts "=" * 72
   puts "Running a \e[31mfailing\e[0m test:"
-  puts "="*72
+  puts "=" * 72
   puts
   puts capture_output("fail")
   puts
 
-  puts "="*72
+  puts "=" * 72
   puts "Running a \e[33merroring\e[0m test:"
-  puts "="*72
+  puts "=" * 72
   puts
   puts capture_output("error")
   puts
 
-  puts "="*72
+  puts "=" * 72
   puts "Running a \e[36mskipped\e[0m test:"
-  puts "="*72
+  puts "=" * 72
   puts
   puts capture_output("skip")
   puts
@@ -65,6 +65,4 @@ def capture_output command
   end
 end
 
-require "rubocop/rake_task"
-
-RuboCop::RakeTask.new
+task default: %i[test rubocop]

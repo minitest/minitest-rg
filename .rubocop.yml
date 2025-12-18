@@ -1,28 +1,18 @@
 AllCops:
   NewCops: enable
   SuggestExtensions: false
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.2
   Exclude:
     - "doc/**/*"
     - "pkg/**/*"
     - "vendor/**/*"
-    - "minitest-rg.gemspec"
-    - "Rakefile"
-    - "Gemfile"
 
-
-Layout/SpaceAroundOperators:
-  Enabled: false
-Metrics/AbcSize:
-  Max: 25
-Metrics/CyclomaticComplexity:
-  Max: 10
-Metrics/MethodLength:
-  Max: 15
+Gemspec/DevelopmentDependencies:
+  EnforcedStyle: gemspec
 Style/Documentation:
-  Enabled: false
-Metrics/PerceivedComplexity:
-  Max: 10
+  Exclude:
+    - "scripts/**/*"
+    - "test/**/*"
 Style/MethodDefParentheses:
   EnforcedStyle: require_no_parentheses
 Style/StringLiterals:

@@ -1,32 +1,40 @@
-= minitest-rg
+# minitest-rg
 
-home :: https://github.com/minitest/minitest-rg
-bugs :: https://github.com/minitest/minitest-rg/issues
+- **home**: https://github.com/minitest/minitest-rg
+- **bugs**: https://github.com/minitest/minitest-rg/issues
 
-{rdoc-image:https://github.com/minitest/minitest-rg/actions/workflows/ci.yml/badge.svg}[https://github.com/minitest/minitest-rg/actions/workflows/ci.yml]
-{rdoc-image:https://github.com/minitest/minitest-rg/actions/workflows/github-code-scanning/codeql/badge.svg}[https://github.com/minitest/minitest-rg/actions/workflows/github-code-scanning/codeql]
+[![CI](https://github.com/minitest/minitest-rg/actions/workflows/ci.yml/badge.svg)](https://github.com/minitest/minitest-rg/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/minitest/minitest-rg/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/minitest/minitest-rg/actions/workflows/github-code-scanning/codeql)
 
 Adds red/green color to your Minitest output.
 
-== Install
+## Install
 
-    gem install minitest-rg
+```
+gem install minitest-rg
+```
 
-== Configure
+## Configure
 
 Add the following to your test helper:
 
-    require "minitest/rg"
+```ruby
+require "minitest/rg"
+```
 
 Or you can run your tests with the `--rg` flag:
 
-    $ ruby test/test_the_thing.rb --rg
+```
+$ ruby test/test_the_thing.rb --rg
+```
 
 Or if you are using a rake task to run your tests you can set the `--rg` flag in the `TESTOPTS` environment variable.
 
-    $ rake test TESTOPTS="--rg"
+```
+$ rake test TESTOPTS="--rg"
+```
 
-== Get Involved
+## Get Involved
 
 Join the Github discussions to get help or offer suggestions:
 
@@ -40,7 +48,7 @@ Contribute changes by creating a pull request:
 
 https://github.com/minitest/minitest-rg/pulls
 
-== License
+## License
 
 Copyright (c) 2023 Mike Moore
 
