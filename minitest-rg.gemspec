@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
 
   s.specification_version = 4
 
-  s.add_runtime_dependency(%q<minitest>.freeze, ["~> 5.0"])
+  s.add_runtime_dependency(%q<minitest>.freeze, [">= 5.0", "< 7"])
   s.add_development_dependency(%q<rubocop>.freeze, ["~> 1.57.0"])
   s.add_development_dependency(%q<rdoc>.freeze, [">= 4.0", "< 7"])
   s.add_development_dependency(%q<hoe>.freeze, ["~> 4.0"])
