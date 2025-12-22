@@ -2,5 +2,5 @@
 
 require "minitest"
 
-Minitest.load_plugins
+Minitest.load :rg
 Minitest::RG.rg! color: $stdout.tty?
