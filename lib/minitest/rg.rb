@@ -3,4 +3,4 @@
 require "minitest"
 
 Minitest.load :rg
-Minitest::RG.rg! color: $stdout.tty?
+Minitest::RedGreenIO.rg! color: $stdout.tty?

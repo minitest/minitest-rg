@@ -5,19 +5,19 @@ require "minitest"
 module Minitest
   def self.plugin_rg_options opts, _options # :nodoc:
     opts.on "--[no-]rg", "Add red/green to test output." do |bool|
-      RG.rg! color: bool
+      RedGreenIO.rg! color: bool
     end
   end
 
   def self.plugin_rg_init options # :nodoc:
-    return unless RG.rg?
+    return unless RedGreenIO.rg?
 
-    io = RG.new options[:io]
+    io = RedGreenIO.new options[:io]
 
     reporter.reporters.grep(Minitest::Reporter).each { |rep| rep.io = io }
   end
 
-  class RG
+  class RedGreenIO
     VERSION = "5.4.0"
 
     COLORS = {
@@ -60,13 +60,13 @@ module Minitest
       end
     end
 
-    def method_missing(msg, *)
+    def method_missing(msg, *) # :nodoc:
       return io.send(msg, *) if io.respond_to? msg
 
       super
     end
 
-    def respond_to_missing? method_name, include_all = false
+    def respond_to_missing? method_name, include_all = false # :nodoc:
       return true if io.respond_to? method_name, include_all
 
       super
