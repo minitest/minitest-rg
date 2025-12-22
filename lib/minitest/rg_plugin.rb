@@ -60,8 +60,8 @@ module Minitest
       end
     end
 
-    def method_missing msg, *args
-      return io.send(msg, *args) if io.respond_to? msg
+    def method_missing(msg, *)
+      return io.send(msg, *) if io.respond_to? msg
 
       super
     end

@@ -19,38 +19,41 @@ Hoe.spec "minitest-rg" do
   self.readme_file       = "README.rdoc"
   self.history_file      = "CHANGELOG.rdoc"
 
-  dependency "minitest",  [">= 5.0", "< 7"]
-  dependency "rubocop",   "~> 1.57.0", :dev
+  require_ruby_version ">= 3.2"
+
+  dependency "minitest", "~> 6.0"
+  dependency "rdoc",     "~> 7.0",    :dev
+  dependency "rubocop",  "~> 1.82.0", :dev
 end
 
 # vim: syntax=ruby
 
 desc "Run all test type scripts"
 task :sanity do
-  puts "="*72
+  puts "=" * 72
   puts "Running a \e[32mpassing\e[0m test:"
-  puts "="*72
+  puts "=" * 72
   puts
   puts capture_output("pass")
   puts
 
-  puts "="*72
+  puts "=" * 72
   puts "Running a \e[31mfailing\e[0m test:"
-  puts "="*72
+  puts "=" * 72
   puts
   puts capture_output("fail")
   puts
 
-  puts "="*72
+  puts "=" * 72
   puts "Running a \e[33merroring\e[0m test:"
-  puts "="*72
+  puts "=" * 72
   puts
   puts capture_output("error")
   puts
 
-  puts "="*72
+  puts "=" * 72
   puts "Running a \e[36mskipped\e[0m test:"
-  puts "="*72
+  puts "=" * 72
   puts
   puts capture_output("skip")
   puts
