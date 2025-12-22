@@ -35,7 +35,7 @@ class TestRG < Minitest::Test
     exp_sum = "\e[31m1 runs, 0 assertions, 0 failures, 1 errors, 0 skips\e[0m"
 
     assert_match exp_dot, output, "Erroring tests are YELLOW"
-    assert_match exp_sum, output, "Erroring summary is YELLOW"
+    assert_match exp_sum, output, "Erroring summary is RED"
   end
 
   def test_skip_is_cyan
@@ -46,7 +46,7 @@ class TestRG < Minitest::Test
               "\r\nYou have skipped tests. Run with --verbose for details.\e[0m"
 
     assert_match exp_dot, output, "Skipped tests are CYAN"
-    assert_match exp_sum, output, "Skipped summary is CYAN"
+    assert_match exp_sum, output, "Skipped summary is GREEN"
   end
 
   def test_no_colors_via_option
