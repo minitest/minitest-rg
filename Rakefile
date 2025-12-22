@@ -19,7 +19,7 @@ Hoe.spec "minitest-rg" do
   self.readme_file       = "README.rdoc"
   self.history_file      = "CHANGELOG.rdoc"
 
-  dependency "minitest",  "~> 5.0"
+  dependency "minitest",  [">= 5.0", "< 7"]
   dependency "rubocop",   "~> 1.57.0", :dev
 end
 
